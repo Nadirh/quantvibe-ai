@@ -131,7 +131,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
 
                     {isExpanded && (
                       <ul className="ml-4 space-y-1 border-l border-[var(--border)] pl-4">
-                        {item.children.map((child) => (
+                        {item.children?.map((child) => (
                           <li key={child.href}>
                             <Link
                               href={child.href}

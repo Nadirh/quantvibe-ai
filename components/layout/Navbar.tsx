@@ -7,7 +7,6 @@ import { ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { NAV_ITEMS } from "@/lib/constants";
 import { Wordmark } from "@/components/ui/Wordmark";
-import { Button } from "@/components/ui/Button";
 import { MobileMenu } from "./MobileMenu";
 
 export function Navbar() {
@@ -101,7 +100,7 @@ export function Navbar() {
                       onMouseLeave={handleMouseLeave}
                     >
                       <div className="rounded-lg border border-[var(--border)] bg-bg-card p-2 shadow-xl min-w-[220px]">
-                        {item.children.map((child) => (
+                        {item.children?.map((child) => (
                           <Link
                             key={child.href}
                             href={child.href}
@@ -140,12 +139,8 @@ export function Navbar() {
           })}
         </div>
 
-        {/* Right side: CTA + hamburger */}
+        {/* Right side: hamburger */}
         <div className="flex items-center gap-2">
-          <Button href="/contact" variant="primary" size="sm">
-            Contact
-          </Button>
-
           {/* Hamburger button - mobile/tablet only */}
           <button
             className="lg:hidden flex items-center justify-center w-12 h-12 rounded-lg text-text-secondary hover:text-text-primary focus:text-text-primary transition-colors"

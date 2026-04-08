@@ -18,12 +18,13 @@ export const NAV_LEARN = [
   { label: "Know What Works (Book)", href: "/learn/know-what-works" },
 ] as const;
 
-export const NAV_ITEMS = [
-  { label: "Services", href: "/#services" },
-  { label: "Learn", href: "/learn", children: NAV_LEARN },
-  { label: "Blog", href: "/blog" },
-  { label: "About", href: "/about" },
-] as const;
+interface NavItem {
+  label: string;
+  href: string;
+  children?: ReadonlyArray<{ label: string; href: string }>;
+}
+
+export const NAV_ITEMS: readonly NavItem[] = [];
 
 export const FOOTER_SERVICES = [
   { label: "Media Mix Modeling", href: "/services/media-mix-modeling" },

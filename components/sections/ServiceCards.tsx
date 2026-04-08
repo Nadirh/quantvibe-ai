@@ -8,7 +8,6 @@ import {
 } from "lucide-react";
 import { Card } from "@/components/ui/Card";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
-import { AnimatedLogo } from "@/components/ui/AnimatedLogo";
 import { ServiceCardInteractions } from "./ServiceCardInteractions";
 
 export interface ServiceData {
@@ -65,38 +64,24 @@ const services: ServiceData[] = [
 
 export function ServiceCards() {
   return (
-    <section className="py-4 md:py-6" id="services">
-      <div className="container-narrow">
-        <AnimatedSection>
-          <h2 className="font-heading text-center mb-1">
-            Performance Marketing Tools,{" "}
-            <span className="text-gradient">Vibe Coded</span>
-          </h2>
-          <div className="flex justify-center mb-4">
-            <AnimatedLogo size={120} />
-          </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {services.map((service, i) => (
+        <AnimatedSection key={service.title} delay={i * 0.08}>
+          <Card
+            as="article"
+            className="h-full flex flex-col transition-colors hover:border-accent-cyan/40 !p-5"
+          >
+            <h3 className="font-heading mb-2">{service.title}</h3>
+            <p className="text-body text-text-secondary mb-3 flex-1">
+              {service.description}
+            </p>
+            <ServiceCardInteractions
+              title={service.title}
+              videoUrl={service.videoUrl}
+            />
+          </Card>
         </AnimatedSection>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {services.map((service, i) => (
-            <AnimatedSection key={service.title} delay={i * 0.08}>
-              <Card
-                as="article"
-                className="h-full flex flex-col transition-colors hover:border-accent-cyan/40 !p-5"
-              >
-                <h3 className="font-heading mb-2">{service.title}</h3>
-                <p className="text-body text-text-secondary mb-3 flex-1">
-                  {service.description}
-                </p>
-                <ServiceCardInteractions
-                  title={service.title}
-                  videoUrl={service.videoUrl}
-                />
-              </Card>
-            </AnimatedSection>
-          ))}
-        </div>
-      </div>
-    </section>
+      ))}
+    </div>
   );
 }
