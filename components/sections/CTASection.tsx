@@ -16,18 +16,18 @@ export function CTASection() {
 
       <div className="container-narrow relative text-center">
         <AnimatedSection>
-          <h2 className="font-heading mb-6">
-            Ready to measure smarter and build faster?
+          <h2 className="font-heading mb-4">
+            Need any of these for your team?
           </h2>
+          <p className="text-body text-text-secondary max-w-prose mx-auto mb-8">
+            Fill out a quick form and we&apos;ll get back to you within 24 hours.
+          </p>
         </AnimatedSection>
 
         <AnimatedSection delay={0.1}>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Button href="/contact" variant="primary" size="lg" fullWidth className="sm:w-auto">
-              Book a Free Consultation
-            </Button>
-            <Button href="/blog" variant="outline" size="lg" fullWidth className="sm:w-auto">
-              Read Our Insights
+              Get Started
             </Button>
           </div>
         </AnimatedSection>

@@ -1,14 +1,16 @@
 export const SITE_NAME = "QuantVibe AI";
 export const SITE_URL = "https://quantvibe.ai";
 export const SITE_DESCRIPTION =
-  "AI-powered tools and training for marketers who want to measure what matters — and build what's next.";
+  "AI-powered tools and training for marketers who want to build what's next.";
 export const SITE_TAGLINE = "Human Intelligence, Vibe Coded";
 
 export const NAV_SERVICES = [
-  { label: "AI Consulting", href: "/services/ai-consulting" },
-  { label: "CRO Agent", href: "/services/cro-agent" },
-  { label: "Media Mix Model", href: "/services/media-mix-model" },
-  { label: "Attribution & Testing", href: "/services/attribution-testing" },
+  { label: "Media Mix Modeling", href: "/services/media-mix-modeling" },
+  { label: "Weekly Reporting", href: "/services/weekly-reporting" },
+  { label: "CRO AI Agent", href: "/services/cro-agent" },
+  { label: "Google Ads AI Agent", href: "/services/google-ads-launcher" },
+  { label: "Customer Segmentation", href: "/services/customer-segmentation" },
+  { label: "Data-Driven Attribution", href: "/services/data-driven-attribution" },
 ] as const;
 
 export const NAV_LEARN = [
@@ -17,14 +19,23 @@ export const NAV_LEARN = [
 ] as const;
 
 export const NAV_ITEMS = [
-  { label: "Services", href: "/services", children: NAV_SERVICES },
+  { label: "Services", href: "/#services" },
   { label: "Learn", href: "/learn", children: NAV_LEARN },
   { label: "Blog", href: "/blog" },
   { label: "About", href: "/about" },
 ] as const;
 
+export const FOOTER_SERVICES = [
+  { label: "Media Mix Modeling", href: "/services/media-mix-modeling" },
+  { label: "Weekly Reporting", href: "/services/weekly-reporting" },
+  { label: "CRO AI Agent", href: "/services/cro-agent" },
+  { label: "Google Ads AI Agent", href: "/services/google-ads-launcher" },
+  { label: "Segmentation", href: "/services/customer-segmentation" },
+  { label: "Attribution", href: "/services/data-driven-attribution" },
+] as const;
+
 export const FOOTER_LINKS = {
-  services: NAV_SERVICES,
+  services: FOOTER_SERVICES,
   learn: NAV_LEARN,
   company: [
     { label: "About", href: "/about" },

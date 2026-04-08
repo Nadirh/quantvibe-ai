@@ -173,7 +173,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
           {/* CTA in drawer */}
           <div className="mt-6 pt-6 border-t border-[var(--border)]">
             <Button href="/contact" variant="primary" fullWidth>
-              Book a Call
+              Contact
             </Button>
           </div>
         </nav>

@@ -143,7 +143,7 @@ export function Navbar() {
         {/* Right side: CTA + hamburger */}
         <div className="flex items-center gap-2">
           <Button href="/contact" variant="primary" size="sm">
-            Book a Call
+            Contact
           </Button>
 
           {/* Hamburger button - mobile/tablet only */}

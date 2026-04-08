@@ -1,64 +1,98 @@
-import Link from "next/link";
-import { Cpu, BarChart3, PieChart, FlaskConical } from "lucide-react";
+import {
+  PieChart,
+  FileSpreadsheet,
+  BarChart3,
+  Rocket,
+  Users,
+  GitFork,
+} from "lucide-react";
 import { Card } from "@/components/ui/Card";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
+import { AnimatedLogo } from "@/components/ui/AnimatedLogo";
+import { ServiceCardInteractions } from "./ServiceCardInteractions";
 
-const services = [
+export interface ServiceData {
+  icon: typeof PieChart;
+  title: string;
+  description: string;
+  videoUrl: string;
+}
+
+const services: ServiceData[] = [
   {
-    icon: Cpu,
-    title: "AI Consulting",
+    icon: PieChart,
+    title: "Media Mix Modeling",
     description:
-      "Custom AI strategy for your marketing stack. From agent design to deployment.",
-    href: "/services/ai-consulting",
+      "Fully transparent, customizable Bayesian MMM. Tune priors to your business instead of trusting a black box. Includes budget optimization.",
+    videoUrl: "",
+  },
+  {
+    icon: FileSpreadsheet,
+    title: "Automated Weekly Reporting",
+    description:
+      "Turn your Monday 4-hour reporting grind into a 5-minute job using Claude\u2019s Excel add-in. Dashboards included.",
+    videoUrl: "",
   },
   {
     icon: BarChart3,
-    title: "CRO Agent",
+    title: "CRO AI Agent",
     description:
-      "AI-powered conversion rate optimization grounded in behavioral science.",
-    href: "/services/cro-agent",
+      "Drop in a landing page URL and get 7+ conversion improvement recommendations grounded in behavioral science.",
+    videoUrl: "",
   },
   {
-    icon: PieChart,
-    title: "Media Mix Model",
+    icon: Rocket,
+    title: "Google Ads AI Agent",
     description:
-      "Know exactly which channels drive revenue. Bayesian MMM without the consultancy price tag.",
-    href: "/services/media-mix-model",
+      "From a landing page URL to a fully structured RSA campaign \u2014 keywords, ad groups, behaviorally-optimized copy with pinning. Ready in under 10 minutes.",
+    videoUrl: "",
   },
   {
-    icon: FlaskConical,
-    title: "Attribution & Testing",
+    icon: Users,
+    title: "Customer Segmentation",
     description:
-      "Incrementality tests, A/B frameworks, and attribution models that tell the truth.",
-    href: "/services/attribution-testing",
+      "K-Means clustering built directly in Excel with Claude. Know who your best customers are and how to find more of them.",
+    videoUrl: "",
+  },
+  {
+    icon: GitFork,
+    title: "Data-Driven Attribution",
+    description:
+      "Markov chain and Shapley value models that replace last-click attribution. Get closer to what\u2019s actually working.",
+    videoUrl: "",
   },
 ];
 
 export function ServiceCards() {
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-4 md:py-6" id="services">
       <div className="container-narrow">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <AnimatedSection>
+          <h2 className="font-heading text-center mb-1">
+            Performance Marketing Tools,{" "}
+            <span className="text-gradient">Vibe Coded</span>
+          </h2>
+          <div className="flex justify-center mb-4">
+            <AnimatedLogo size={120} />
+          </div>
+        </AnimatedSection>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {services.map((service, i) => (
-            <AnimatedSection key={service.href} delay={i * 0.1}>
-              <Link
-                href={service.href}
-                className="block no-underline group h-full"
+            <AnimatedSection key={service.title} delay={i * 0.08}>
+              <Card
+                as="article"
+                className="h-full flex flex-col transition-colors hover:border-accent-cyan/40 !p-5"
               >
-                <Card className="h-full transition-colors hover:border-accent-cyan/40 focus-within:border-accent-cyan/40">
-                  <service.icon
-                    size={32}
-                    className="text-accent-cyan mb-4"
-                    aria-hidden="true"
-                  />
-                  <h3 className="font-heading mb-2 group-hover:text-accent-cyan group-focus-within:text-accent-cyan transition-colors">
-                    {service.title}
-                  </h3>
-                  <p className="text-body text-text-secondary">
-                    {service.description}
-                  </p>
-                </Card>
-              </Link>
+                <h3 className="font-heading mb-2">{service.title}</h3>
+                <p className="text-body text-text-secondary mb-3 flex-1">
+                  {service.description}
+                </p>
+                <ServiceCardInteractions
+                  title={service.title}
+                  videoUrl={service.videoUrl}
+                />
+              </Card>
             </AnimatedSection>
           ))}
         </div>

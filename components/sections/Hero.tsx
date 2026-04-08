@@ -24,8 +24,8 @@ export function Hero() {
 
         <AnimatedSection delay={0.1}>
           <p className="text-body text-text-secondary max-w-prose mx-auto mb-10">
-            AI-powered tools and training for marketers who want to measure what
-            matters — and build what&apos;s next.
+            AI-powered tools and training for marketers who want to build
+            what&apos;s next.
           </p>
         </AnimatedSection>
 
