@@ -1,7 +1,7 @@
 import { Resend } from "resend";
 import { NextResponse } from "next/server";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+export const dynamic = "force-dynamic";
 
 export async function POST(request: Request) {
   try {
@@ -13,6 +13,8 @@ export async function POST(request: Request) {
         { status: 400 }
       );
     }
+
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
     await resend.emails.send({
       from: "QuantVibe AI <contact@quantvibe.ai>",
