@@ -64,9 +64,9 @@ const services: ServiceData[] = [
 
 export function ServiceCards() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 md:auto-rows-fr gap-4">
       {services.map((service, i) => (
-        <AnimatedSection key={service.title} delay={i * 0.08}>
+        <AnimatedSection key={service.title} delay={i * 0.08} animateOnLoad>
           <Card
             as="article"
             className="h-full flex flex-col transition-colors hover:border-accent-cyan/40 !p-5"
