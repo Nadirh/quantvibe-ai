@@ -58,7 +58,7 @@ const services: ServiceData[] = [
     title: "Data-Driven Attribution",
     description:
       "Markov chain and Shapley value models that replace last-click attribution. Get closer to what\u2019s actually working.",
-    videoUrl: "",
+    videoUrl: "https://www.youtube.com/embed/ssrdD0wbiIU",
   },
 ];
 
