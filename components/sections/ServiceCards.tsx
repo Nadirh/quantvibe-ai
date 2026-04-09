@@ -44,7 +44,7 @@ const services: ServiceData[] = [
     title: "Google Ads AI Agent",
     description:
       "From a landing page URL to a fully structured RSA campaign \u2014 keywords, ad groups, behaviorally-optimized copy with pinning. Ready in under 10 minutes.",
-    videoUrl: "",
+    videoUrl: "https://www.youtube.com/embed/xvVBgd_dEGE",
   },
   {
     icon: Users,
