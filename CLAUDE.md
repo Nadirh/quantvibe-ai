@@ -98,6 +98,24 @@ These are not suggestions. Every commit must comply.
 - No flashing content (nothing >3 flashes/second).
 - No auto-playing animations that can't be paused.
 
+## Integrations
+
+### Resend (Email)
+- Contact form (`app/api/contact/route.ts`) sends via Resend
+- Sending domain: `contact.quantvibe.ai` (verified subdomain)
+- From: `contact@contact.quantvibe.ai` → To: `nadir@quantvibe.ai`
+- Env var: `RESEND_API_KEY` (set in Vercel, all environments)
+- DNS records (SPF, DKIM) configured in GoDaddy for `quantvibe.ai`
+
+### Cloudflare Turnstile (Bot Protection)
+- Contact form includes Turnstile widget (`@marsidev/react-turnstile`)
+- Client-side: widget renders in dark mode, disables submit until verified
+- Server-side: `app/api/contact/route.ts` validates token against Cloudflare API
+- Env vars (set in Vercel, all environments):
+  - `NEXT_PUBLIC_TURNSTILE_SITE_KEY` (public, used client-side)
+  - `TURNSTILE_SECRET_KEY` (server-side verification)
+- Registered hostnames: `quantvibe.ai`, `quantvibe-ai-eight.vercel.app`
+
 ## Code Style
 
 - TypeScript strict mode. No `any` types.
