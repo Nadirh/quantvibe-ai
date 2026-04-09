@@ -37,7 +37,7 @@ const services: ServiceData[] = [
     title: "CRO AI Agent",
     description:
       "Drop in a landing page URL and get 7+ conversion improvement recommendations grounded in behavioral science.",
-    videoUrl: "",
+    videoUrl: "https://www.youtube.com/embed/mbE2sBnt488",
   },
   {
     icon: Rocket,
