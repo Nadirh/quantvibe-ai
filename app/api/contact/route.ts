@@ -17,7 +17,7 @@ export async function POST(request: Request) {
     const resend = new Resend(process.env.RESEND_API_KEY);
 
     await resend.emails.send({
-      from: "QuantVibe AI <contact@quantvibe.ai>",
+      from: "QuantVibe AI <contact@contact.quantvibe.ai>",
       to: "nadir@quantvibe.ai",
       replyTo: email,
       subject: `New contact from ${name}`,
