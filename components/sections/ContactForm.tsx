@@ -5,10 +5,12 @@ import { Card } from "@/components/ui/Card";
 
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus("sending");
+    setErrorMessage("");
 
     const form = e.currentTarget;
     const data = {
@@ -25,9 +27,13 @@ export function ContactForm() {
         body: JSON.stringify(data),
       });
 
-      if (!res.ok) throw new Error("Failed to send");
+      if (!res.ok) {
+        const body = await res.json().catch(() => null);
+        throw new Error(body?.error || "Failed to send message.");
+      }
       setStatus("sent");
-    } catch {
+    } catch (err) {
+      setErrorMessage(err instanceof Error ? err.message : "Failed to send message.");
       setStatus("error");
     }
   };
@@ -43,7 +49,7 @@ export function ContactForm() {
       ) : status === "error" ? (
         <div role="alert">
           <p className="text-body text-warning mb-3">
-            Something went wrong. Please try again.
+            {errorMessage || "Something went wrong. Please try again."}
           </p>
           <button
             onClick={() => setStatus("idle")}
@@ -78,6 +84,8 @@ export function ContactForm() {
               name="email"
               type="email"
               required
+              pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+              title="Please enter a valid email address (e.g. name@example.com)"
               autoComplete="email"
               className="w-full rounded-lg border border-[var(--border)] bg-bg-primary px-4 py-2 text-body text-text-primary placeholder:text-text-secondary/50 transition-colors focus:border-accent-cyan min-h-[48px]"
               placeholder="Your email"
