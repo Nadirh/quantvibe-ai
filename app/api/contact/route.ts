@@ -5,11 +5,31 @@ export const dynamic = "force-dynamic";
 
 export async function POST(request: Request) {
   try {
-    const { name, email, phone, message } = await request.json();
+    const { name, email, phone, message, turnstileToken } = await request.json();
 
     if (!name || !email || !message) {
       return NextResponse.json(
         { error: "Name, email, and message are required." },
+        { status: 400 }
+      );
+    }
+
+    const turnstileRes = await fetch(
+      "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+          secret: process.env.TURNSTILE_SECRET_KEY!,
+          response: turnstileToken || "",
+        }),
+      }
+    );
+    const turnstileData = await turnstileRes.json();
+
+    if (!turnstileData.success) {
+      return NextResponse.json(
+        { error: "Verification failed. Please try again." },
         { status: 400 }
       );
     }

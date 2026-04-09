@@ -12,6 +12,7 @@
     "@fontsource-variable/jetbrains-mono": "^5.2.8",
     "@fontsource-variable/plus-jakarta-sans": "^5.2.8",
     "@fontsource-variable/space-grotesk": "^5.2.10",
+    "@marsidev/react-turnstile": "^1.5.0",
     "clsx": "^2.1.0",
     "framer-motion": "^11.0.0",
     "lucide-react": "^0.400.0",

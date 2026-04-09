@@ -1,14 +1,24 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useState, useRef, type FormEvent } from "react";
+import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
 import { Card } from "@/components/ui/Card";
 
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const turnstileRef = useRef<TurnstileInstance>(null);
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (!turnstileToken) {
+      setErrorMessage("Please complete the verification check.");
+      setStatus("error");
+      return;
+    }
+
     setStatus("sending");
     setErrorMessage("");
 
@@ -18,6 +28,7 @@ export function ContactForm() {
       email: (form.elements.namedItem("email") as HTMLInputElement).value,
       phone: (form.elements.namedItem("phone") as HTMLInputElement).value,
       message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+      turnstileToken,
     };
 
     try {
@@ -52,7 +63,7 @@ export function ContactForm() {
             {errorMessage || "Something went wrong. Please try again."}
           </p>
           <button
-            onClick={() => setStatus("idle")}
+            onClick={() => { setStatus("idle"); setTurnstileToken(""); turnstileRef.current?.reset(); }}
             className="text-body text-accent-cyan font-semibold hover:text-text-primary focus:text-text-primary transition-colors min-h-[48px]"
           >
             Try again
@@ -120,9 +131,18 @@ export function ContactForm() {
             />
           </div>
 
+          <Turnstile
+            ref={turnstileRef}
+            siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
+            onSuccess={setTurnstileToken}
+            onError={() => setTurnstileToken("")}
+            onExpire={() => setTurnstileToken("")}
+            options={{ theme: "dark", size: "flexible" }}
+          />
+
           <button
             type="submit"
-            disabled={status === "sending"}
+            disabled={status === "sending" || !turnstileToken}
             className="w-full rounded-lg bg-accent-cyan text-bg-primary font-semibold px-6 py-3 text-body transition-all hover:brightness-110 focus:brightness-110 min-h-[48px] disabled:opacity-60"
           >
             {status === "sending" ? "Sending\u2026" : "Send Message"}
