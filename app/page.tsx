@@ -28,6 +28,24 @@ export default function HomePage() {
             </div>
           </AnimatedSection>
 
+          <AnimatedSection delay={0.05}>
+            <div className="max-w-3xl mx-auto mb-8">
+              <h2 className="font-heading mb-6">About QuantVibe AI</h2>
+              <p className="text-body text-text-secondary mb-4">
+                Built by marketers with domain expertise and technical know-how.
+                Every tool in this suite was built using AI and vibe coding by
+                performance marketing practitioners who actually use these tools
+                day-to-day.
+              </p>
+              <p className="text-body text-text-secondary">
+                Now, we can build these tools for you as well,
+                completely customized to your needs. Or, if you prefer, we can
+                teach you to build these yourselves. No coding or machine learning
+                background required.
+              </p>
+            </div>
+          </AnimatedSection>
+
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] gap-20">
             <ServiceCards />
             <aside className="lg:sticky lg:top-20 lg:self-start space-y-4">
@@ -44,22 +62,6 @@ export default function HomePage() {
               </AnimatedSection>
             </aside>
           </div>
-        </div>
-      </section>
-      <section className="py-12 md:py-16 bg-bg-secondary">
-        <div className="container-narrow max-w-3xl">
-          <AnimatedSection>
-            <h2 className="font-heading mb-6">About QuantVibe AI</h2>
-            <p className="text-body text-text-secondary">
-              Built by marketers with domain expertise and technical know-how.
-              Every tool in this suite was built using AI and vibe coding by
-              performance marketing practitioners who actually use these tools
-              day-to-day. Now, we can build these tools for you as well,
-              completely customized to your needs. Or, if you prefer, we can
-              teach you to build these yourselves. No coding or machine learning
-              background required.
-            </p>
-          </AnimatedSection>
         </div>
       </section>
     </>
