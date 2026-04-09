@@ -23,42 +23,42 @@ const services: ServiceData[] = [
     title: "Media Mix Modeling",
     description:
       "Fully transparent, customizable Bayesian MMM. Tune priors to your business instead of trusting a black box. Includes budget optimization.",
-    videoUrl: "https://www.youtube.com/embed/mj7F4Fmj14s",
+    videoUrl: "https://www.youtube.com/embed/mj7F4Fmj14s?vq=hd1080",
   },
   {
     icon: FileSpreadsheet,
     title: "Automated Weekly Reporting",
     description:
       "Turn your Monday 4-hour reporting grind into a 5-minute job using Claude\u2019s Excel add-in. Dashboards included.",
-    videoUrl: "https://www.youtube.com/embed/epHfx2VqEj8",
+    videoUrl: "https://www.youtube.com/embed/epHfx2VqEj8?vq=hd1080",
   },
   {
     icon: BarChart3,
     title: "CRO AI Agent",
     description:
       "Drop in a landing page URL and get 7+ conversion improvement recommendations grounded in behavioral science.",
-    videoUrl: "https://www.youtube.com/embed/mbE2sBnt488",
+    videoUrl: "https://www.youtube.com/embed/mbE2sBnt488?vq=hd1080",
   },
   {
     icon: Rocket,
     title: "Google Ads AI Agent",
     description:
       "From a landing page URL to a fully structured RSA campaign \u2014 keywords, ad groups, behaviorally-optimized copy with pinning. Ready in under 10 minutes.",
-    videoUrl: "https://www.youtube.com/embed/xvVBgd_dEGE",
+    videoUrl: "https://www.youtube.com/embed/xvVBgd_dEGE?vq=hd1080",
   },
   {
     icon: Users,
     title: "Customer Segmentation",
     description:
       "K-Means clustering built directly in Excel with Claude. Know who your best customers are and how to find more of them.",
-    videoUrl: "https://www.youtube.com/embed/HhT9w27ijxg",
+    videoUrl: "https://www.youtube.com/embed/HhT9w27ijxg?vq=hd1080",
   },
   {
     icon: GitFork,
     title: "Data-Driven Attribution",
     description:
       "Markov chain and Shapley value models that replace last-click attribution. Get closer to what\u2019s actually working.",
-    videoUrl: "https://www.youtube.com/embed/ssrdD0wbiIU",
+    videoUrl: "https://www.youtube.com/embed/ssrdD0wbiIU?vq=hd1080",
   },
 ];
 
