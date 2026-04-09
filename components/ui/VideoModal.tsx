@@ -109,6 +109,11 @@ export function VideoModal({ isOpen, onClose, videoUrl, title }: VideoModalProps
                 allowFullScreen
               />
             </div>
+
+            {/* Quality hint */}
+            <p className="px-4 py-2 text-[16px] text-text-secondary/60 text-center">
+              For best quality, click the gear icon (⚙) in the video player and select 1080p
+            </p>
           </motion.div>
         </motion.div>
       )}
