@@ -23,7 +23,7 @@ const services: ServiceData[] = [
     title: "Media Mix Modeling",
     description:
       "Fully transparent, customizable Bayesian MMM. Tune priors to your business instead of trusting a black box. Includes budget optimization.",
-    videoUrl: "",
+    videoUrl: "https://www.youtube.com/embed/mj7F4Fmj14s",
   },
   {
     icon: FileSpreadsheet,
