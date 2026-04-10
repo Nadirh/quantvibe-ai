@@ -35,7 +35,7 @@ export default function HomePage() {
                 Built by marketers with domain expertise and technical know-how.
                 Every tool in this suite was built using AI and vibe coding by
                 performance marketing practitioners who actually use these tools
-                day-to-day.
+                day to day.
               </p>
               <p className="text-body text-text-secondary">
                 Now, we can build these tools for you as well,

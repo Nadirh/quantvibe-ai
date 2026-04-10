@@ -29,7 +29,7 @@ const services: ServiceData[] = [
     icon: FileSpreadsheet,
     title: "Automated Weekly Reporting",
     description:
-      "Turn your Monday 4-hour reporting grind into a 5-minute job using Claude\u2019s Excel add-in. Dashboards included.",
+      "Turn your Monday 4 hour reporting grind into a 5 minute job using Claude\u2019s Excel add-in. Dashboards included.",
     videoUrl: "https://www.youtube.com/embed/epHfx2VqEj8?vq=hd1080",
   },
   {
@@ -43,7 +43,7 @@ const services: ServiceData[] = [
     icon: Rocket,
     title: "Google Ads AI Agent",
     description:
-      "From a landing page URL to a fully structured RSA campaign \u2014 keywords, ad groups, behaviorally-optimized copy with pinning. Ready in under 10 minutes.",
+      "From a landing page URL to a fully structured RSA campaign: keywords, ad groups, behaviorally optimized copy with pinning. Ready in under 10 minutes.",
     videoUrl: "https://www.youtube.com/embed/xvVBgd_dEGE?vq=hd1080",
   },
   {
@@ -57,7 +57,7 @@ const services: ServiceData[] = [
     icon: GitFork,
     title: "Data-Driven Attribution",
     description:
-      "Markov chain and Shapley value models that replace last-click attribution. Get closer to what\u2019s actually working.",
+      "Markov chain and Shapley value models that replace last click attribution. Get closer to what\u2019s actually working.",
     videoUrl: "https://www.youtube.com/embed/ssrdD0wbiIU?vq=hd1080",
   },
 ];
