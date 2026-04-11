@@ -82,10 +82,10 @@ export default function AutomatedWeeklyReportingPage() {
                   style={{ paddingBottom: "56.25%" }}
                 >
                   <iframe
-                    src="https://www.youtube.com/embed/epHfx2VqEj8?vq=hd1080"
+                    src="https://player.vimeo.com/video/1182250004"
                     title="Automated Weekly Reporting demo video"
                     className="absolute inset-0 w-full h-full"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
                     allowFullScreen
                   />
                 </div>
