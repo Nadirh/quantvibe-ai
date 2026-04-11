@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/data-driven-attribution",
     "/cro-ai-agent",
     "/customer-segmentation",
+    "/automated-weekly-reporting",
     "/services",
     "/services/ai-consulting",
     "/services/attribution-testing",

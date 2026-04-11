@@ -52,6 +52,7 @@ const growthApps: ServiceData[] = [
     description:
       "Turn your Monday 4 hour reporting grind into a 5 minute job using Claude\u2019s Excel add-in. Dashboards included.",
     videoUrl: "https://www.youtube.com/embed/epHfx2VqEj8?vq=hd1080",
+    learnMoreUrl: "/automated-weekly-reporting",
   },
   {
     icon: Rocket,
