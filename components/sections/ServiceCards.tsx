@@ -15,6 +15,7 @@ export interface ServiceData {
   title: string;
   description: string;
   videoUrl: string;
+  learnMoreUrl?: string;
 }
 
 const measurementApps: ServiceData[] = [
@@ -24,6 +25,7 @@ const measurementApps: ServiceData[] = [
     description:
       "Fully transparent, customizable Bayesian MMM. Tune priors to your business instead of trusting a black box. Includes budget optimization.",
     videoUrl: "https://www.youtube.com/embed/mj7F4Fmj14s?vq=hd1080",
+    learnMoreUrl: "/media-mix-model",
   },
   {
     icon: GitFork,
@@ -79,6 +81,7 @@ function ServiceCard({ service, delay }: { service: ServiceData; delay: number }
         <ServiceCardInteractions
           title={service.title}
           videoUrl={service.videoUrl}
+          learnMoreUrl={service.learnMoreUrl}
         />
       </Card>
     </AnimatedSection>

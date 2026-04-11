@@ -5,10 +5,10 @@ const BASE_URL = "https://quantvibe.ai";
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
     "",
+    "/media-mix-model",
     "/services",
     "/services/ai-consulting",
     "/services/cro-agent",
-    "/services/media-mix-model",
     "/services/attribution-testing",
     "/learn/vibe-coding",
     "/learn/know-what-works",
