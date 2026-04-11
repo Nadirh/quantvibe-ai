@@ -6,6 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [
     "",
     "/media-mix-model",
+    "/google-ads-launcher",
     "/services",
     "/services/ai-consulting",
     "/services/cro-agent",

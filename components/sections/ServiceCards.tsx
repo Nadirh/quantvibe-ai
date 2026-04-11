@@ -57,6 +57,7 @@ const growthApps: ServiceData[] = [
     description:
       "From a landing page URL to a fully structured RSA campaign: keywords, ad groups, behaviorally optimized copy with pinning. Ready in under 10 minutes.",
     videoUrl: "https://www.youtube.com/embed/xvVBgd_dEGE?vq=hd1080",
+    learnMoreUrl: "/google-ads-launcher",
   },
   {
     icon: BarChart3,
