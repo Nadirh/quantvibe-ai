@@ -83,10 +83,10 @@ export default function CustomerSegmentationPage() {
                   style={{ paddingBottom: "56.25%" }}
                 >
                   <iframe
-                    src="https://www.youtube.com/embed/HhT9w27ijxg?vq=hd1080"
+                    src="https://player.vimeo.com/video/1182251552"
                     title="Customer Segmentation demo video"
                     className="absolute inset-0 w-full h-full"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
                     allowFullScreen
                   />
                 </div>

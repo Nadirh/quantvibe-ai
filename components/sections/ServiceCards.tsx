@@ -40,7 +40,7 @@ const measurementApps: ServiceData[] = [
     title: "Customer Segmentation",
     description:
       "K-Means clustering built directly in Excel with Claude. Know who your best customers are and how to find more of them.",
-    videoUrl: "https://www.youtube.com/embed/HhT9w27ijxg?vq=hd1080",
+    videoUrl: "https://player.vimeo.com/video/1182251552",
     learnMoreUrl: "/customer-segmentation",
   },
 ];
