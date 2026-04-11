@@ -24,7 +24,7 @@ const measurementApps: ServiceData[] = [
     title: "Media Mix Modeling",
     description:
       "Fully transparent, customizable Bayesian MMM. Tune priors to your business instead of trusting a black box. Includes budget optimization.",
-    videoUrl: "https://www.youtube.com/embed/mj7F4Fmj14s?vq=hd1080",
+    videoUrl: "https://player.vimeo.com/video/1182245811",
     learnMoreUrl: "/media-mix-model",
   },
   {
