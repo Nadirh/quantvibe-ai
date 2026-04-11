@@ -86,10 +86,10 @@ export default function DataDrivenAttributionPage() {
                   style={{ paddingBottom: "56.25%" }}
                 >
                   <iframe
-                    src="https://www.youtube.com/embed/ssrdD0wbiIU?vq=hd1080"
+                    src="https://player.vimeo.com/video/1182249125"
                     title="Data-Driven Attribution demo video"
                     className="absolute inset-0 w-full h-full"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
                     allowFullScreen
                   />
                 </div>
