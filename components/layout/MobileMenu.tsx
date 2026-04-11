@@ -17,6 +17,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   const pathname = usePathname();
   const menuRef = useRef<HTMLDivElement>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
+  const previousPathnameRef = useRef(pathname);
   const [expandedItem, setExpandedItem] = useState<string | null>(null);
 
   // Focus trap and escape key
@@ -62,7 +63,10 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
 
   // Close on route change
   useEffect(() => {
-    onClose();
+    if (previousPathnameRef.current !== pathname) {
+      previousPathnameRef.current = pathname;
+      onClose();
+    }
   }, [pathname, onClose]);
 
   if (!isOpen) return null;
