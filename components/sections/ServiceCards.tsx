@@ -67,7 +67,7 @@ const growthApps: ServiceData[] = [
     title: "CRO AI Agent",
     description:
       "Drop in a landing page URL and get 7+ conversion improvement recommendations grounded in behavioral science.",
-    videoUrl: "https://www.youtube.com/embed/mbE2sBnt488?vq=hd1080",
+    videoUrl: "https://player.vimeo.com/video/1182252135",
     learnMoreUrl: "/cro-ai-agent",
   },
 ];
