@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ServiceCards } from "@/components/sections/ServiceCards";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { BookCover } from "@/components/ui/BookCover";
@@ -51,10 +52,21 @@ export default function HomePage() {
             <aside className="lg:sticky lg:top-20 lg:self-start space-y-4">
               <AnimatedSection delay={0.15}>
                 <div className="rounded-xl border border-[var(--border)] bg-bg-card p-4 text-center">
-                  <Badge variant="cyan">Book Coming Soon</Badge>
-                  <div className="flex justify-center mt-3">
+                  <Badge variant="cyan">Coming Soon: Kindle &amp; Paperback</Badge>
+                  <div className="flex justify-center mt-3 mb-3">
                     <BookCover width={280} height={400} />
                   </div>
+                  <p className="text-[16px] text-text-secondary">
+                    Already available in Google Doc and PDF formats.
+                  </p>
+                  <p className="text-[16px] mt-2">
+                    <Link
+                      href="/contact"
+                      className="text-accent-cyan font-semibold hover:text-text-primary focus:text-text-primary transition-colors"
+                    >
+                      Contact us for a free copy
+                    </Link>
+                  </p>
                 </div>
               </AnimatedSection>
               <AnimatedSection delay={0.2}>

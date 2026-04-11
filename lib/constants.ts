@@ -24,7 +24,20 @@ interface NavItem {
   children?: ReadonlyArray<{ label: string; href: string }>;
 }
 
-export const NAV_ITEMS: readonly NavItem[] = [];
+const APPS_AND_TOOLS = [
+  { label: "Media Mix Modeling", href: "/media-mix-model" },
+  { label: "Data-Driven Attribution", href: "/data-driven-attribution" },
+  { label: "Customer Segmentation", href: "/customer-segmentation" },
+  { label: "Automated Weekly Reporting", href: "/automated-weekly-reporting" },
+  { label: "Google Ads Launcher", href: "/google-ads-launcher" },
+  { label: "CRO AI Agent", href: "/cro-ai-agent" },
+] as const;
+
+export const NAV_ITEMS: readonly NavItem[] = [
+  { label: "Apps & Tools", href: "/#services", children: APPS_AND_TOOLS },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
+];
 
 export const FOOTER_SERVICES = [
   { label: "Media Mix Modeling", href: "/services/media-mix-modeling" },
