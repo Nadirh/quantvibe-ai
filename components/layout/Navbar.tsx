@@ -41,7 +41,8 @@ export function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[var(--border)] bg-bg-primary/95 backdrop-blur-sm">
+    <>
+      <header className="sticky top-0 z-50 border-b border-[var(--border)] bg-bg-primary/95 backdrop-blur-sm">
       <nav
         ref={navRef}
         className="container-narrow flex h-14 items-center justify-between lg:h-16"
@@ -165,9 +166,11 @@ export function Navbar() {
           </button>
         </div>
       </nav>
+      </header>
 
-      {/* Mobile menu */}
+      {/* Mobile menu — must be outside <header> because backdrop-blur creates a
+          containing block that would constrain position: fixed descendants. */}
       <MobileMenu isOpen={mobileOpen} onClose={() => setMobileOpen(false)} />
-    </header>
+    </>
   );
 }
