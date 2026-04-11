@@ -33,6 +33,7 @@ const measurementApps: ServiceData[] = [
     description:
       "Markov chain and Shapley value models that replace last click attribution. Get closer to what\u2019s actually working.",
     videoUrl: "https://www.youtube.com/embed/ssrdD0wbiIU?vq=hd1080",
+    learnMoreUrl: "/data-driven-attribution",
   },
   {
     icon: Users,

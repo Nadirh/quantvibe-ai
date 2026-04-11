@@ -7,6 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "",
     "/media-mix-model",
     "/google-ads-launcher",
+    "/data-driven-attribution",
     "/services",
     "/services/ai-consulting",
     "/services/cro-agent",
