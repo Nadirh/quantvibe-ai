@@ -29,10 +29,10 @@ export default function HomePage() {
             </div>
             <p className="text-body text-text-secondary max-w-3xl mx-auto mb-2">
               From transparent Bayesian MMM and profitable customer segmentation
-              to automated reporting and CRO AI agents.
+              to automated reporting and CRO (Conversion Rate Optimization) AI agents.
             </p>
             <p className="text-body text-text-secondary max-w-3xl mx-auto mb-6">
-              QuantVibe AI gives DTC teams the advanced quantitative growth
+              QuantVibe AI gives DTC (Direct to Consumer) teams the advanced quantitative growth
               stack to scale profitably.
             </p>
           </AnimatedSection>
