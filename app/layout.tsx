@@ -40,6 +40,13 @@ export default function RootLayout({
       lang="en"
       className={`${fontHeading.variable} ${fontBody.variable} ${fontMono.variable}`}
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; window.scrollTo(0, 0);`,
+          }}
+        />
+      </head>
       <body className="min-h-screen flex flex-col">
         <a href="#main-content" className="skip-to-content">
           Skip to main content
