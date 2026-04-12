@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ChevronDown } from "lucide-react";
@@ -54,6 +55,14 @@ export function Navbar() {
           className="no-underline flex items-center gap-2 min-h-[48px] min-w-[48px]"
           aria-label="QuantVibe AI home"
         >
+          <Image
+            src="/logo/icon.png"
+            alt=""
+            width={32}
+            height={25}
+            className="flex-shrink-0"
+            aria-hidden="true"
+          />
           <Wordmark size="sm" />
         </Link>
 
