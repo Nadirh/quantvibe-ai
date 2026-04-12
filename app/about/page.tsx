@@ -54,6 +54,23 @@ export default function AboutPage() {
             </h1>
           </AnimatedSection>
 
+          <AnimatedSection delay={0.03}>
+            <div className="max-w-3xl mx-auto mb-12">
+              <p className="text-body text-text-secondary mb-4">
+                Built by marketers with domain expertise and technical know-how.
+                Every tool in this suite was built using AI and vibe coding by
+                performance marketing practitioners who actually use these tools
+                day to day.
+              </p>
+              <p className="text-body text-text-secondary">
+                Now, we can build these tools for you as well,
+                completely customized to your needs. Or, if you prefer, we can
+                teach you to build these yourselves. No coding or machine learning
+                background required.
+              </p>
+            </div>
+          </AnimatedSection>
+
           {/* Principles */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 md:mb-20">
             {principles.map((principle, i) => (

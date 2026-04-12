@@ -80,7 +80,7 @@ function ServiceCard({ service, delay }: { service: ServiceData; delay: number }
         className="w-full flex flex-col transition-colors hover:border-accent-cyan/40 !p-5"
       >
         <h3 className="font-heading mb-2">{service.title}</h3>
-        <p className="text-body text-text-secondary mb-3 flex-1">
+        <p className="text-body text-text-secondary mb-12 flex-1">
           {service.description}
         </p>
         <ServiceCardInteractions
@@ -96,7 +96,7 @@ function ServiceCard({ service, delay }: { service: ServiceData; delay: number }
 export function ServiceCards() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4">
-      <div className="flex flex-col gap-4">
+      <div className="grid gap-4" style={{ gridTemplateRows: "auto 1fr 1fr 1fr" }}>
         <AnimatedSection animateOnLoad>
           <h2 className="font-heading text-center text-accent-cyan">Marketing Measurement Apps</h2>
         </AnimatedSection>
@@ -108,7 +108,7 @@ export function ServiceCards() {
           />
         ))}
       </div>
-      <div className="flex flex-col gap-4">
+      <div className="grid gap-4" style={{ gridTemplateRows: "auto 1fr 1fr 1fr" }}>
         <AnimatedSection animateOnLoad>
           <h2 className="font-heading text-center text-accent-cyan">Growth and Efficiency Apps</h2>
         </AnimatedSection>
