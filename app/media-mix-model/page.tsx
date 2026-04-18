@@ -71,18 +71,26 @@ export default function MediaMixModelPage() {
               </AnimatedSection>
 
               <AnimatedSection delay={0.15} animateOnLoad>
-                <p className="text-body text-text-secondary mb-10">
-                  The model is fully{" "}
-                  <strong>customized to your business:</strong> promotions,
-                  seasonality, pricing changes, competitor activity, even
-                  prior holdout test results. And we&apos;re{" "}
-                  <strong>completely transparent</strong>; you&apos;ll see
-                  every equation, every parameter, nothing hidden.{" "}
-                  <strong>
-                    And most importantly, you can own the MMM, if you&apos;d
-                    like.
-                  </strong>
-                </p>
+                <ul className="text-body text-text-secondary mb-10 space-y-3">
+                  <li className="flex items-start gap-3">
+                    <span className="mt-2 block h-2 w-2 rounded-full bg-accent-cyan flex-shrink-0" aria-hidden="true" />
+                    The model is fully <strong>customized to your business:</strong>{" "}
+                    promotions, seasonality, pricing changes, competitor
+                    activity, even prior holdout test results.
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-2 block h-2 w-2 rounded-full bg-accent-cyan flex-shrink-0" aria-hidden="true" />
+                    We are <strong>completely transparent</strong>;
+                    you&apos;ll see every equation, every parameter, nothing
+                    hidden.
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-2 block h-2 w-2 rounded-full bg-accent-cyan flex-shrink-0" aria-hidden="true" />
+                    <strong>You can even own the MMM yourself</strong> (if
+                    you&apos;d like), so just a one time fee for app
+                    development.
+                  </li>
+                </ul>
               </AnimatedSection>
 
               <AnimatedSection delay={0.2} animateOnLoad>
