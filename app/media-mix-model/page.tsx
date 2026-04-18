@@ -74,21 +74,27 @@ export default function MediaMixModelPage() {
                 <ul className="text-body text-text-secondary mb-10 space-y-3">
                   <li className="flex items-start gap-3">
                     <span className="mt-2 block h-2 w-2 rounded-full bg-accent-cyan flex-shrink-0" aria-hidden="true" />
-                    The model is fully <strong>customized to your business:</strong>{" "}
-                    promotions, seasonality, pricing changes, competitor
-                    activity, even prior holdout test results.
+                    <span>
+                      The model is fully <strong>customized to your business:</strong>{" "}
+                      promotions, seasonality, pricing changes, competitor
+                      activity, even prior holdout test results.
+                    </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 block h-2 w-2 rounded-full bg-accent-cyan flex-shrink-0" aria-hidden="true" />
-                    We are <strong>completely transparent</strong>;
-                    you&apos;ll see every equation, every parameter, nothing
-                    hidden.
+                    <span>
+                      We are <strong>completely transparent</strong>;
+                      you&apos;ll see every equation, every parameter, nothing
+                      hidden.
+                    </span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="mt-2 block h-2 w-2 rounded-full bg-accent-cyan flex-shrink-0" aria-hidden="true" />
-                    <strong>You can even own the MMM yourself</strong> (if
-                    you&apos;d like), so just a one time fee for app
-                    development.
+                    <span>
+                      <strong>You can even own the MMM yourself</strong> (if
+                      you&apos;d like), so just a one time fee for app
+                      development.
+                    </span>
                   </li>
                 </ul>
               </AnimatedSection>
