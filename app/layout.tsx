@@ -9,7 +9,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} — Human Intelligence, Vibe Coded`,
+    default: `${SITE_NAME}: Master Your Measurement and Automate Your Growth`,
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
