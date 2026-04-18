@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { fontHeading, fontBody, fontMono } from "@/lib/fonts";
 import { SITE_NAME, SITE_URL, SITE_DESCRIPTION } from "@/lib/constants";
 import { Navbar } from "@/components/layout/Navbar";
@@ -43,25 +44,28 @@ export default function RootLayout({
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NV8XZW7K');`,
-          }}
-        />
-        <script
-          dangerouslySetInnerHTML={{
             __html: `if ('scrollRestoration' in history) history.scrollRestoration = 'manual'; window.scrollTo(0, 0);`,
           }}
         />
       </head>
+      <Script
+        id="gtm"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NV8XZW7K');`,
+        }}
+      />
       <body className="min-h-screen flex flex-col">
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-NV8XZW7K"
             height="0"
             width="0"
+            title="Google Tag Manager"
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
