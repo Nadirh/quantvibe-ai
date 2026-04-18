@@ -50,7 +50,7 @@ const growthApps: ServiceData[] = [
     icon: FileSpreadsheet,
     title: "Automated Weekly Reporting",
     description:
-      "Turn your Monday 4 hour reporting grind into a 5 minute job using Claude\u2019s Excel add-in. Dashboards included.",
+      "Turn your Monday 5 hour reporting grind into a 5 minute job using Claude\u2019s Excel add-in. Dashboards included.",
     videoUrl: "https://player.vimeo.com/video/1182250004",
     learnMoreUrl: "/automated-weekly-reporting",
   },

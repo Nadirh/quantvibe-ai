@@ -4,14 +4,14 @@ import { ContactForm } from "@/components/sections/ContactForm";
 import { serviceSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Automated Weekly Reporting — Turn 4 Hours Into 5 Minutes",
+  title: "Automated Weekly Reporting — Turn 5 Hours Into 5 Minutes",
   description:
     "Automated weekly reporting pipelines in Excel that pull directly from your data warehouse. Week over week comparisons, multi-model attribution, and auto-generated decks.",
   alternates: {
     canonical: "https://quantvibe.ai/automated-weekly-reporting",
   },
   openGraph: {
-    title: "Automated Weekly Reporting — Turn 4 Hours Into 5 Minutes",
+    title: "Automated Weekly Reporting — Turn 5 Hours Into 5 Minutes",
     description:
       "Automated weekly reporting pipelines in Excel that pull directly from your data warehouse.",
     url: "https://quantvibe.ai/automated-weekly-reporting",
@@ -50,7 +50,7 @@ export default function AutomatedWeeklyReportingPage() {
                 <p className="text-body text-text-secondary mb-6">
                   If you or your team still spends half your Monday
                   building weekly reports, we can fully automate that.
-                  Four hours pulling data, formatting tables, comparing
+                  5 hours pulling data, formatting tables, comparing
                   week over week, and you haven&apos;t even started
                   thinking about what the numbers mean.
                 </p>
@@ -68,8 +68,8 @@ export default function AutomatedWeeklyReportingPage() {
                   conversions and revenue? Built once, updated
                   automatically. And if you need a deck from those
                   numbers, that can be automated too. The goal is to turn
-                  your Monday morning from four hours of report building
-                  into five minutes of report reading.
+                  your Monday morning from 5 hours of report building
+                  into 5 minutes of report reading.
                 </p>
               </AnimatedSection>
 
