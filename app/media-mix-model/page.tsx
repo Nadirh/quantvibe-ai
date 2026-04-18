@@ -48,18 +48,6 @@ export default function MediaMixModelPage() {
             <div className="max-w-3xl">
               <AnimatedSection delay={0.05} animateOnLoad>
                 <p className="text-body text-text-secondary mb-6">
-                  Are your TV, podcast, or out-of-home channels invisible to
-                  your attribution system? If you&apos;re only measuring
-                  clicks, you&apos;re flying blind on the channels that might
-                  be driving, or draining, your bottom line. A media mix
-                  model is usually the best way to see the full picture, and
-                  most companies either don&apos;t have one or are stuck with
-                  a black box they can&apos;t explain.
-                </p>
-              </AnimatedSection>
-
-              <AnimatedSection delay={0.1} animateOnLoad>
-                <p className="text-body text-text-secondary mb-6">
                   Our media mix model takes your daily spend by channel and
                   your overall profit data, then teases apart exactly how much
                   value each channel is generating, including the delayed
