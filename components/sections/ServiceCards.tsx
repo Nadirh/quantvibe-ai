@@ -23,7 +23,7 @@ const measurementApps: ServiceData[] = [
     icon: PieChart,
     title: "Media Mix Modeling",
     description:
-      "Fully transparent, customizable Bayesian MMM. Tune priors to your business instead of trusting a black box. Includes budget optimization.",
+      "Fully transparent, customizable MMM that you can even own. Include any priors that you may have. Budget Optimization and Forecasting included.",
     videoUrl: "https://player.vimeo.com/video/1182245811",
     learnMoreUrl: "/media-mix-model",
   },
@@ -64,7 +64,7 @@ const growthApps: ServiceData[] = [
   },
   {
     icon: BarChart3,
-    title: "CRO AI Agent",
+    title: "Conversion Rate Optimization (CRO) Agent",
     description:
       "Drop in a landing page URL and get 7+ conversion improvement recommendations grounded in behavioral science.",
     videoUrl: "https://player.vimeo.com/video/1182252135",

@@ -39,7 +39,7 @@ export default function CroAiAgentPage() {
         <div className="container-narrow">
           <AnimatedSection animateOnLoad>
             <h1 className="font-heading text-center mb-10">
-              CRO AI Agent
+              Conversion Rate Optimization (CRO) AI Agent
             </h1>
           </AnimatedSection>
 

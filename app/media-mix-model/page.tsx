@@ -72,11 +72,16 @@ export default function MediaMixModelPage() {
 
               <AnimatedSection delay={0.15} animateOnLoad>
                 <p className="text-body text-text-secondary mb-10">
-                  The model is fully customized to your business: promotions,
+                  The model is fully{" "}
+                  <strong>customized to your business:</strong> promotions,
                   seasonality, pricing changes, competitor activity, even
-                  prior holdout test results. And we&apos;re completely
-                  transparent; you&apos;ll see every equation, every
-                  parameter, nothing hidden.
+                  prior holdout test results. And we&apos;re{" "}
+                  <strong>completely transparent</strong>; you&apos;ll see
+                  every equation, every parameter, nothing hidden.{" "}
+                  <strong>
+                    And most importantly, you can own the MMM, if you&apos;d
+                    like.
+                  </strong>
                 </p>
               </AnimatedSection>
 
