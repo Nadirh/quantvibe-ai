@@ -38,24 +38,41 @@ export default function MediaMixModelPage() {
       <section className="py-12 md:py-16">
         <div className="container-narrow">
           <AnimatedSection animateOnLoad>
-            <h1 className="font-heading text-center mb-10">
+            <h1 className="font-heading text-center mb-4">
               Media Mix Modeling
             </h1>
+            <p className="text-h3-mobile lg:text-h3 font-heading text-accent-cyan text-center max-w-3xl mx-auto mb-10">
+              Discover which marketing channels actually drive revenue
+              growth.
+            </p>
           </AnimatedSection>
 
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-12 lg:gap-16">
             {/* Left: copy + video */}
             <div className="max-w-3xl">
               <AnimatedSection delay={0.05} animateOnLoad>
-                <p className="text-body text-text-secondary mb-6">
-                  Our media mix model takes your daily spend by channel and
-                  your overall profit data, then teases apart exactly how much
-                  value each channel is generating, including the delayed
-                  impact and diminishing returns. You&apos;ll see response
-                  curves, marginal ROI by channel, and a budget optimization
-                  tool with guardrails so you can reallocate spend with
-                  confidence.
-                </p>
+                <ul className="text-body text-text-secondary mb-6 space-y-3">
+                  <li className="flex items-start gap-3">
+                    <span className="mt-2 block h-2 w-2 rounded-full bg-accent-cyan flex-shrink-0" aria-hidden="true" />
+                    <span>
+                      Our media mix model incorporates priors, delayed impact,
+                      channel interaction, and diminishing returns.
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-2 block h-2 w-2 rounded-full bg-accent-cyan flex-shrink-0" aria-hidden="true" />
+                    <span>
+                      It will give you a full channel attribution analysis.
+                    </span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-2 block h-2 w-2 rounded-full bg-accent-cyan flex-shrink-0" aria-hidden="true" />
+                    <span>
+                      It makes budget reallocation recommendations based on
+                      ROI projections and marginal effects.
+                    </span>
+                  </li>
+                </ul>
               </AnimatedSection>
 
               <AnimatedSection delay={0.15} animateOnLoad>

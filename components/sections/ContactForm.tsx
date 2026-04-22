@@ -73,7 +73,7 @@ export function ContactForm() {
         <form onSubmit={handleSubmit} className="space-y-3">
           <div>
             <label htmlFor="contact-name" className="block text-body text-text-secondary mb-1">
-              Name
+              Full Name
             </label>
             <input
               id="contact-name"
@@ -82,13 +82,13 @@ export function ContactForm() {
               required
               autoComplete="name"
               className="w-full rounded-lg border border-[var(--border)] bg-bg-primary px-4 py-2 text-body text-text-primary placeholder:text-text-secondary/50 transition-colors focus:border-accent-cyan min-h-[48px]"
-              placeholder="Your name"
+              placeholder="Your full name"
             />
           </div>
 
           <div>
             <label htmlFor="contact-email" className="block text-body text-text-secondary mb-1">
-              Email
+              Work Email
             </label>
             <input
               id="contact-email"
@@ -99,7 +99,7 @@ export function ContactForm() {
               title="Please enter a valid email address (e.g. name@example.com)"
               autoComplete="email"
               className="w-full rounded-lg border border-[var(--border)] bg-bg-primary px-4 py-2 text-body text-text-primary placeholder:text-text-secondary/50 transition-colors focus:border-accent-cyan min-h-[48px]"
-              placeholder="Your email"
+              placeholder="Your work email"
             />
           </div>
 
@@ -147,6 +147,13 @@ export function ContactForm() {
           >
             {status === "sending" ? "Sending\u2026" : "Send Message"}
           </button>
+
+          <p className="text-[16px] text-accent-cyan text-center font-semibold mt-1">
+            Free Consultation without Commitment
+          </p>
+          <p className="text-[16px] text-text-secondary/70 text-center mt-1">
+            Your information is never shared.
+          </p>
         </form>
       )}
     </Card>
