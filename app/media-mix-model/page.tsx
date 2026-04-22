@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { ContactForm } from "@/components/sections/ContactForm";
+import { GuideDownloadForm } from "@/components/sections/GuideDownloadForm";
 import { serviceSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
@@ -137,14 +138,28 @@ export default function MediaMixModelPage() {
 
             {/* Right: sticky contact form */}
             <aside
-              className="lg:sticky lg:top-20 lg:self-start"
-              aria-label="Contact form"
+              className="lg:sticky lg:top-20 lg:self-start space-y-6"
+              aria-label="Contact and guide download forms"
             >
               <AnimatedSection delay={0.3} animateOnLoad>
                 <ContactForm
                   heading="Interested in an MMM?"
                   subheading="Tell us about your business and we'll be in touch."
                 />
+              </AnimatedSection>
+
+              <AnimatedSection delay={0.35} animateOnLoad>
+                <div className="flex items-center gap-3" aria-hidden="true">
+                  <div className="flex-1 h-px bg-[var(--border)]" />
+                  <span className="text-body text-text-secondary/70 font-medium">
+                    Or
+                  </span>
+                  <div className="flex-1 h-px bg-[var(--border)]" />
+                </div>
+              </AnimatedSection>
+
+              <AnimatedSection delay={0.4} animateOnLoad>
+                <GuideDownloadForm />
               </AnimatedSection>
             </aside>
           </div>
