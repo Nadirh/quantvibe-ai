@@ -3,6 +3,7 @@
 import { useState, useRef, type FormEvent } from "react";
 import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
 import { Card } from "@/components/ui/Card";
+import { gtmEvent } from "@/lib/gtm";
 
 interface ContactFormProps {
   heading?: string;
@@ -50,6 +51,10 @@ export function ContactForm({
         const body = await res.json().catch(() => null);
         throw new Error(body?.error || "Failed to send message.");
       }
+      gtmEvent({
+        event: "contact_form_submit",
+        form_location: typeof window !== "undefined" ? window.location.pathname : undefined,
+      });
       setStatus("sent");
     } catch (err) {
       setErrorMessage(err instanceof Error ? err.message : "Failed to send message.");

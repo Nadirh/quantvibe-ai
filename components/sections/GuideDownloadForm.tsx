@@ -5,6 +5,7 @@ import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
 import { Card } from "@/components/ui/Card";
 import { BookCover } from "@/components/ui/BookCover";
 import { Badge } from "@/components/ui/Badge";
+import { gtmEvent } from "@/lib/gtm";
 
 export function GuideDownloadForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
@@ -42,6 +43,11 @@ export function GuideDownloadForm() {
         const body = await res.json().catch(() => null);
         throw new Error(body?.error || "Failed to send guide.");
       }
+      gtmEvent({
+        event: "guide_download",
+        guide_name: "when-not-to-build-an-mmm",
+        form_location: typeof window !== "undefined" ? window.location.pathname : undefined,
+      });
       setStatus("sent");
     } catch (err) {
       setErrorMessage(err instanceof Error ? err.message : "Failed to send guide.");
