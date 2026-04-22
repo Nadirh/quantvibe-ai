@@ -95,7 +95,7 @@ export function GuideDownloadForm() {
           </button>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="space-y-3">
+        <form id="guide-form" onSubmit={handleSubmit} className="space-y-3">
           <div>
             <label htmlFor="guide-name" className="block text-body text-text-secondary mb-1">
               Full Name
