@@ -41,9 +41,8 @@ export default function MediaMixModelPage() {
             <h1 className="font-heading text-center mb-4">
               Media Mix Modeling
             </h1>
-            <p className="text-h3-mobile lg:text-h3 font-heading text-accent-cyan text-center max-w-3xl mx-auto mb-10">
-              Discover which marketing channels actually drive revenue
-              growth.
+            <p className="text-h3-mobile lg:text-h3 font-heading text-accent-cyan text-center max-w-2xl mx-auto mb-10 text-balance">
+              Discover which marketing channels actually drive revenue growth.
             </p>
           </AnimatedSection>
 
@@ -142,7 +141,10 @@ export default function MediaMixModelPage() {
               aria-label="Contact form"
             >
               <AnimatedSection delay={0.3} animateOnLoad>
-                <ContactForm />
+                <ContactForm
+                  heading="Interested in an MMM?"
+                  subheading="Tell us about your business and we'll be in touch."
+                />
               </AnimatedSection>
             </aside>
           </div>

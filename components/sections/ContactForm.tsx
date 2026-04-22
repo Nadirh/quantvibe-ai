@@ -4,7 +4,15 @@ import { useState, useRef, type FormEvent } from "react";
 import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
 import { Card } from "@/components/ui/Card";
 
-export function ContactForm() {
+interface ContactFormProps {
+  heading?: string;
+  subheading?: string;
+}
+
+export function ContactForm({
+  heading = "Contact Us",
+  subheading,
+}: ContactFormProps = {}) {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [errorMessage, setErrorMessage] = useState("");
   const [turnstileToken, setTurnstileToken] = useState("");
@@ -51,7 +59,12 @@ export function ContactForm() {
 
   return (
     <Card>
-      <h2 className="font-heading mb-4">Contact Us</h2>
+      <h2 className={`font-heading ${subheading ? "mb-2" : "mb-4"}`}>
+        {heading}
+      </h2>
+      {subheading && (
+        <p className="text-body text-text-secondary mb-4">{subheading}</p>
+      )}
 
       {status === "sent" ? (
         <p className="text-body text-accent-cyan" role="status">
