@@ -3,6 +3,7 @@ import Script from "next/script";
 import { fontHeading, fontBody, fontMono } from "@/lib/fonts";
 import { SITE_NAME, SITE_URL, SITE_DESCRIPTION } from "@/lib/constants";
 import { Navbar } from "@/components/layout/Navbar";
+import { UtilityBar } from "@/components/layout/UtilityBar";
 import { Footer } from "@/components/layout/Footer";
 import "./globals.css";
 
@@ -72,6 +73,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <a href="#main-content" className="skip-to-content">
           Skip to main content
         </a>
+        <UtilityBar />
         <Navbar />
         <main id="main-content" className="flex-1">
           {children}

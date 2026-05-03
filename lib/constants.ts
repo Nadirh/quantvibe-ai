@@ -4,6 +4,10 @@ export const SITE_DESCRIPTION =
   "AI-powered tools and training for marketers who want to build what's next.";
 export const SITE_TAGLINE = "Human Intelligence, Vibe Coded";
 
+export const CONTACT_PHONE_DISPLAY = "(202) 810-3637";
+export const CONTACT_PHONE_TEL = "+12028103637";
+export const CONTACT_EMAIL = "hello@quantvibe.ai";
+
 export const NAV_SERVICES = [
   { label: "Media Mix Modeling", href: "/services/media-mix-modeling" },
   { label: "Weekly Reporting", href: "/services/weekly-reporting" },
