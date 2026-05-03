@@ -139,7 +139,7 @@ export default function PrivacyPage() {
           <h2 className="font-heading text-text-primary">Contact</h2>
           <p>
             Questions about this policy or requests about your data? Reach us at{" "}
-            <a href="mailto:nadir@quantvibe.ai">nadir@quantvibe.ai</a>.
+            <a href="mailto:hello@quantvibe.ai">hello@quantvibe.ai</a>.
           </p>
         </div>
       </div>

@@ -8,13 +8,13 @@ export function Footer() {
         <nav aria-label="Footer" className="flex flex-wrap justify-center gap-x-6 gap-y-2">
           <Link
             href="/privacy"
-            className="text-caption text-text-secondary hover:text-accent-cyan focus:text-accent-cyan rounded-sm"
+            className="text-caption text-text-secondary underline underline-offset-4 decoration-1 hover:text-accent-cyan focus:text-accent-cyan hover:decoration-accent-cyan focus:decoration-accent-cyan rounded-sm"
           >
             Privacy Policy
           </Link>
           <Link
             href="/terms"
-            className="text-caption text-text-secondary hover:text-accent-cyan focus:text-accent-cyan rounded-sm"
+            className="text-caption text-text-secondary underline underline-offset-4 decoration-1 hover:text-accent-cyan focus:text-accent-cyan hover:decoration-accent-cyan focus:decoration-accent-cyan rounded-sm"
           >
             Terms of Service
           </Link>
