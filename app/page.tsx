@@ -39,7 +39,10 @@ export default function HomePage() {
           </AnimatedSection>
 
           <div className="grid grid-cols-1 lg:grid-cols-[1fr_340px] lg:items-start gap-20">
-            <ServiceCards />
+            <div>
+              <ServiceCards />
+              <ExperienceSection />
+            </div>
             <aside className="lg:sticky lg:top-20 lg:self-start space-y-4">
               <AnimatedSection delay={0.15}>
                 <ContactForm />
@@ -67,8 +70,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      <ExperienceSection />
     </>
   );
 }

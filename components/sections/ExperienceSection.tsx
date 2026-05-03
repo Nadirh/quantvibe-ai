@@ -55,26 +55,24 @@ function BrandGroup({
 export function ExperienceSection() {
   return (
     <section
-      className="py-12 md:py-16 border-t border-[var(--border)]"
+      className="mt-10 md:mt-12 pt-8 md:pt-10 border-t border-[var(--border)]"
       aria-labelledby="experience-heading"
     >
-      <div className="container-narrow">
-        <AnimatedSection>
-          <h2
-            id="experience-heading"
-            className="font-heading text-center mb-10"
-          >
-            Collective Marketing Measurement Experience at:
-          </h2>
-        </AnimatedSection>
+      <AnimatedSection>
+        <h2
+          id="experience-heading"
+          className="font-heading text-center mb-8"
+        >
+          Collective Marketing Measurement Experience at:
+        </h2>
+      </AnimatedSection>
 
-        <AnimatedSection delay={0.1}>
-          <div className="space-y-10">
-            <BrandGroup label="Ecommerce" brands={ECOMMERCE_BRANDS} />
-            <BrandGroup label="Fintech" brands={FINTECH_BRANDS} />
-          </div>
-        </AnimatedSection>
-      </div>
+      <AnimatedSection delay={0.1}>
+        <div className="space-y-8">
+          <BrandGroup label="Ecommerce" brands={ECOMMERCE_BRANDS} />
+          <BrandGroup label="Fintech" brands={FINTECH_BRANDS} />
+        </div>
+      </AnimatedSection>
     </section>
   );
 }
