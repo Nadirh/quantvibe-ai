@@ -6,7 +6,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://quantvibe.ai/terms",
   },
-  robots: { index: false, follow: true },
 };
 
 export default function TermsPage() {
