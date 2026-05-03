@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ServiceCards } from "@/components/sections/ServiceCards";
+import { ExperienceSection } from "@/components/sections/ExperienceSection";
 import { AnimatedLogo } from "@/components/ui/AnimatedLogo";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { BookCover } from "@/components/ui/BookCover";
@@ -66,6 +67,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <ExperienceSection />
     </>
   );
 }
